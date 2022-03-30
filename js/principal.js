@@ -1,5 +1,3 @@
-var titulo = document.querySelector(".titulo");
-console.log("Fui carregado de um arquivo externo");
 
 var paciente = document.querySelector("#primeiro-paciente")
 var tdPeso = paciente.querySelector(".info-peso")
@@ -31,6 +29,5 @@ if(pesoEhValido && alturaEhValida){
 
 
 console.log(peso)
-console.log(altura)
-console.log(imc)
+console.log(altura) console.log(imc)
 
