@@ -21,8 +21,12 @@
   <main>
     <section class="container">
       <h2>Pacientes</h2>
-      <table>
-        <thead>
+      <div>
+        <label for="filtroNome">Filter:</label>
+        <input type="text" name="filtro" id="filtroNome">
+      </div>
+      <table class="table-hover">
+        <thead class="thead-light">
             <tr>
               <th>Nome</th>
               <th>Peso(kg)</th>
@@ -44,14 +48,14 @@
             <tr class="paciente">
               <td class="info-nome">Kemoel</td>
               <td class="info-peso">76</td>
-              <td class="info-altura">3 </td>
+              <td class="info-altura">2.9</td>
               <td class="info-gordura">10</td>
               <td class="info-imc">0</td>
             </tr>
             
             <tr class="paciente">
               <td class="info-nome">Thamiris</td>
-              <td class="info-peso">74</td>
+              <td class="info-peso">100</td>
               <td class="info-altura">1.65</td>
               <td class="info-gordura">10</td>
               <td class="info-imc">0</td>
@@ -62,23 +66,24 @@
     </section>
     <section class="container">
       <h2>Adicionar novo paciente</h2>
+      <ul id="mensagem-de-erro"></ul>
       <div class="formulario">
         <form  class="row">
           <div class="col-12 mb-1">
             <label for="nome" class="form-label">Nome</label>
-            <input type="text" id="nome" class="form-control">
+            <input type="text" id="nome" class="form-control" name="nome" required>
           </div>
           <div class="col-4 mb-1">
             <label for="peso" class="form-label">Peso</label>
-            <input type="number" id="peso" class="form-control">
+            <input type="number" id="peso" class="form-control" name="peso" required>
           </div>
           <div class="col-4 mb-1">
             <label for="altura" class="form-label">Altura</label>
-            <input type="number" id="altura" class="form-control">
+            <input type="number" id="altura" class="form-control" name="altura" required>
           </div>
           <div class="col-4 mb-1">
             <label for="gordura-corporal" class="form-label">% de Gordura</label>
-            <input type="number" id="gordura-corporal" class="form-control">
+            <input type="number" id="gordura-corporal" class="form-control" name="gordura" required>
           </div>
           <div class="col-12 mt-3">
             <button type="submit" class="adicionar btn btn-primary">Adicionar</button>
@@ -87,6 +92,9 @@
       </div>
     </section>
   </main>
-  <script src="js/principal.js"></script>
+  <script src="js/calcula-imc.js"></script>
+  <script src="js/form.js"></script>
+  <script src="js/remove-tr.js"></script>
+  <script src="js/filtro.js"></script>
 </body>
 </html>
